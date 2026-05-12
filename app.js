@@ -15,12 +15,14 @@ document.addEventListener('DOMContentLoaded', init);
 
 async function init() {
   await loadCitations();
+  loadUserCitations();
   loadSettings();
   setupNavigation();
   setupSettings();
   setupSearch();
   setupShare();
   setupInstall();
+  setupAddCitation();
   renderToday();
   renderLibrary();
   registerServiceWorker();
@@ -36,6 +38,80 @@ async function loadCitations() {
     console.error('Erreur chargement citations:', e);
     citations = [];
   }
+}
+
+function loadUserCitations() {
+  const saved = localStorage.getItem('userCitations');
+  if (saved) {
+    try {
+      const userCitations = JSON.parse(saved);
+      citations = citations.concat(userCitations);
+    } catch (e) {}
+  }
+}
+
+function saveUserCitation(citation) {
+  const saved = localStorage.getItem('userCitations');
+  let userCitations = [];
+  if (saved) {
+    try { userCitations = JSON.parse(saved); } catch (e) {}
+  }
+  userCitations.push(citation);
+  localStorage.setItem('userCitations', JSON.stringify(userCitations));
+}
+
+// ===== Ajouter une citation =====
+function setupAddCitation() {
+  const btnAdd = document.getElementById('btn-add');
+  const modal = document.getElementById('modal-add');
+  const btnClose = document.getElementById('btn-close-modal');
+  const form = document.getElementById('form-add');
+
+  btnAdd.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  });
+
+  btnClose.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const texte = document.getElementById('input-texte').value.trim();
+    const auteur = document.getElementById('input-auteur').value.trim();
+    const roman = document.getElementById('input-roman').value.trim() || '';
+    const themesRaw = document.getElementById('input-themes').value.trim();
+
+    if (!texte || !auteur) return;
+
+    const themes = themesRaw
+      ? themesRaw.split(',').map(t => t.trim().toLowerCase()).filter(t => t)
+      : [];
+
+    const newId = Math.max(...citations.map(c => c.id), 0) + 1;
+    const citation = {
+      id: newId,
+      texte: texte,
+      auteur: auteur,
+      roman: roman,
+      themes: themes
+    };
+
+    citations.push(citation);
+    saveUserCitation(citation);
+    renderLibrary();
+
+    form.reset();
+    modal.classList.add('hidden');
+    showToast('Citation ajoutee !');
+  });
 }
 
 // ===== Navigation =====
@@ -95,12 +171,20 @@ function renderLibrary() {
   filterAndRender();
 }
 
+let filtersInitialized = false;
+
 function populateFilters() {
   const authors = [...new Set(citations.map(c => c.auteur))].sort();
   const themes = [...new Set(citations.flatMap(c => c.themes))].sort();
 
   const authorSelect = document.getElementById('filter-author');
   const themeSelect = document.getElementById('filter-theme');
+
+  const prevAuthor = authorSelect.value;
+  const prevTheme = themeSelect.value;
+
+  authorSelect.innerHTML = '<option value="">Tous</option>';
+  themeSelect.innerHTML = '<option value="">Tous</option>';
 
   authors.forEach(a => {
     const opt = document.createElement('option');
@@ -116,8 +200,14 @@ function populateFilters() {
     themeSelect.appendChild(opt);
   });
 
-  authorSelect.addEventListener('change', filterAndRender);
-  themeSelect.addEventListener('change', filterAndRender);
+  authorSelect.value = prevAuthor;
+  themeSelect.value = prevTheme;
+
+  if (!filtersInitialized) {
+    authorSelect.addEventListener('change', filterAndRender);
+    themeSelect.addEventListener('change', filterAndRender);
+    filtersInitialized = true;
+  }
 }
 
 function setupSearch() {

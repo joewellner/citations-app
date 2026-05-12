@@ -68,7 +68,43 @@
       <p id="results-count" class="results-count"></p>
       <div id="citations-list" class="citations-list"></div>
     </div>
+
+    <!-- Bouton flottant ajouter -->
+    <button id="btn-add" class="fab" aria-label="Ajouter une citation">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+      </svg>
+    </button>
   </main>
+
+  <!-- Modal : Ajouter une citation -->
+  <div id="modal-add" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">Nouvelle citation</h2>
+        <button id="btn-close-modal" class="btn-close" aria-label="Fermer">&times;</button>
+      </div>
+      <form id="form-add" class="form-add">
+        <div class="form-group">
+          <label for="input-texte">Citation *</label>
+          <textarea id="input-texte" rows="4" placeholder="Ecris la citation ici..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="input-auteur">Auteur *</label>
+          <input type="text" id="input-auteur" placeholder="Ex: Albert Camus" required>
+        </div>
+        <div class="form-group">
+          <label for="input-roman">Oeuvre</label>
+          <input type="text" id="input-roman" placeholder="Ex: L'Etranger (optionnel)">
+        </div>
+        <div class="form-group">
+          <label for="input-themes">Theme(s)</label>
+          <input type="text" id="input-themes" placeholder="Ex: sagesse, amour (optionnel)">
+        </div>
+        <button type="submit" class="btn-submit">Ajouter</button>
+      </form>
+    </div>
+  </div>
 
   <!-- Page : Réglages -->
   <main id="page-settings" class="page">
