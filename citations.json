@@ -1,107 +1,2302 @@
 [
   {
     "id": 1,
-    "texte": "On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux.",
-    "auteur": "Antoine de Saint-Exupéry",
-    "roman": "Le Petit Prince",
-    "themes": ["sagesse", "amour"]
+    "texte": "Il n’y a qu’un problème philosophique vraiment sérieux : c’est le suicide. Juger que la vie vaut ou ne vaut pas la peine d’être vécue, c’est répondre à la question fondamentale de la philosophie.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "philosophie",
+      "mort",
+      "vie"
+    ]
   },
   {
     "id": 2,
-    "texte": "Il faut imaginer Sisyphe heureux.",
-    "auteur": "Albert Camus",
-    "roman": "Le Mythe de Sisyphe",
-    "themes": ["philosophie", "bonheur"]
+    "texte": "Commencer à penser, c’est commencer d’être miné.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "philosophie"
+    ]
   },
   {
     "id": 3,
-    "texte": "Toutes les familles heureuses se ressemblent ; chaque famille malheureuse est malheureuse à sa façon.",
-    "auteur": "Léon Tolstoï",
-    "roman": "Anna Karénine",
-    "themes": ["famille", "bonheur"]
+    "texte": "Se tuer, c’est avouer qu’on est dépassé par la vie ou qu’on ne la comprend pas.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "mort",
+      "vie",
+      "temps"
+    ]
   },
   {
     "id": 4,
-    "texte": "La beauté sauvera le monde.",
-    "auteur": "Fiodor Dostoïevski",
-    "roman": "L'Idiot",
-    "themes": ["beauté", "espoir"]
+    "texte": "Au contraire, dans un univers soudain privé d’illusions et de lumières, l’homme se sent un étranger. Ce divorce entre l’homme de sa vie, l’acteur et son décor, c’est proprement le sentiment de l’absurde. Le suicide est une solution à l’absurde.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "absurde",
+      "mort",
+      "vie"
+    ]
   },
   {
     "id": 5,
-    "texte": "Longtemps, je me suis couché de bonne heure.",
-    "auteur": "Marcel Proust",
-    "roman": "Du côté de chez Swann",
-    "themes": ["mémoire", "temps"]
+    "texte": "Les grands sentiments promènent avec eux leur univers, splendide ou misérable.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "souffrance"
+    ]
   },
   {
     "id": 6,
-    "texte": "Il n'y a pas de honte à préférer le bonheur.",
-    "auteur": "Albert Camus",
-    "roman": "La Peste",
-    "themes": ["bonheur", "philosophie"]
+    "texte": "Il est probablement vrai qu’un homme nous demeure à jamais inconnu.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "condition humaine"
+    ]
   },
   {
     "id": 7,
-    "texte": "Qui veut noyer son chien l'accuse de la rage.",
-    "auteur": "Molière",
-    "roman": "Les Femmes savantes",
-    "themes": ["sagesse", "injustice"]
+    "texte": "Un homme se définit aussi bien par ses comédies que par ses élans sincères.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "condition humaine",
+      "morale",
+      "révolte"
+    ]
   },
   {
     "id": 8,
-    "texte": "L'homme est condamné à être libre.",
-    "auteur": "Jean-Paul Sartre",
-    "roman": "L'Être et le Néant",
-    "themes": ["liberté", "philosophie"]
+    "texte": "Toutes les grandes actions et toutes les grandes pensées ont un commencement dérisoire.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "philosophie"
+    ]
   },
   {
     "id": 9,
-    "texte": "Le cœur a ses raisons que la raison ne connaît point.",
-    "auteur": "Blaise Pascal",
-    "roman": "Pensées",
-    "themes": ["amour", "sagesse"]
+    "texte": "La lassitude est à la fin des actes d’une vie machinale, mais elle inaugure en même temps le mouvement de la conscience. La suite, c’est le retour inconscient dans la chaîne, ou c’est l’éveil définitif. Au bout de l’éveil vient, avec le temps, la conséquence : suicide ou rétablissement. Le simple “souci” est l’origine de tout.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "conscience",
+      "mort",
+      "vie"
+    ]
   },
   {
     "id": 10,
-    "texte": "La vie, c'est ce qui arrive quand on est occupé à faire d'autres projets.",
-    "auteur": "John Lennon",
-    "roman": "Interviews",
-    "themes": ["vie", "temps"]
+    "texte": "Tout commence par la conscience et rien ne vaut que par elle.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "conscience"
+    ]
   },
   {
     "id": 11,
-    "texte": "Ce qui ne me tue pas me rend plus fort.",
-    "auteur": "Friedrich Nietzsche",
-    "roman": "Le Crépuscule des idoles",
-    "themes": ["force", "philosophie"]
+    "texte": "Cette révolte de la chair, c’est l’absurde. Cette épaisseur et cette étrangeté du monde, c’est l’absurde. Ce malaise devant l’inhumanité de l’homme même, c’est aussi l’absurde.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "condition humaine",
+      "absurde",
+      "révolte"
+    ]
   },
   {
     "id": 12,
-    "texte": "L'enfer, c'est les autres.",
-    "auteur": "Jean-Paul Sartre",
-    "roman": "Huis clos",
-    "themes": ["philosophie", "solitude"]
+    "texte": "On ne s’étonnera jamais cependant jamais assez de ce que tout le monde vive comme si personne “ne savait”.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "nature"
+    ]
   },
   {
     "id": 13,
-    "texte": "Vivre, c'est la chose la plus rare au monde. La plupart des gens se contentent d'exister.",
-    "auteur": "Oscar Wilde",
-    "roman": "L'Âme de l'homme sous le socialisme",
-    "themes": ["vie", "sagesse"]
+    "texte": "L’esprit qui se penche sur lui-même se perd dans un tournoiement vertigineux.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "conscience"
+    ]
   },
   {
     "id": 14,
-    "texte": "La liberté commence où l'ignorance finit.",
-    "auteur": "Victor Hugo",
-    "roman": "Discours à l'Assemblée",
-    "themes": ["liberté", "sagesse"]
+    "texte": "Comprendre le monde pour un homme, c’est le réduire à l’humain, le marquer de son sceau. Toute pensée est anthropomorphique.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "condition humaine",
+      "philosophie",
+      "nature"
+    ]
   },
   {
     "id": 15,
-    "texte": "Aimer, ce n'est pas se regarder l'un l'autre, c'est regarder ensemble dans la même direction.",
-    "auteur": "Antoine de Saint-Exupéry",
-    "roman": "Terre des hommes",
-    "themes": ["amour", "sagesse"]
+    "texte": "Si l’homme reconnaissait que l’univers lui aussi peut aimer et souffrir, il serait réconcilié.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "amour",
+      "condition humaine",
+      "souffrance"
+    ]
+  },
+  {
+    "id": 16,
+    "texte": "Cette nostalgie d’unité, cet appétit d’absolu illustre le mouvement essentiel du drame humain.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 17,
+    "texte": "L’absurde naît de cette confrontation entre l’appel humain et le silence déraisonnable du monde.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "absurde",
+      "philosophie",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 18,
+    "texte": "Un homme est toujours la proie de ses vérités. Une fois reconnues, il se saurait s’en détacher. Il faut bien payer un peu.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "philosophie",
+      "condition humaine",
+      "morale"
+    ]
+  },
+  {
+    "id": 19,
+    "texte": "La pensée d’un homme est avant tout sa nostalgie.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "philosophie",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 20,
+    "texte": "La vie sera d’autant mieux vécue qu’elle n’aura pas de sens.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "vie"
+    ]
+  },
+  {
+    "id": 21,
+    "texte": "Pour l’homme absurde, l’absurde est sa tension la plus extrême, celle qu’il maintient constamment d’un effort solitaire, car il sait que dans cette conscience et dans cette révolte au jour le jour, il témoigne de sa seule vérité qui est le défi.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "révolte",
+      "absurde",
+      "philosophie"
+    ]
+  },
+  {
+    "id": 22,
+    "texte": "Savoir si l’homme est libre ne m’intéresse pas. Je ne puis éprouver que ma propre liberté. Le problème de “la liberté en soi” n’a pas de sens. Car il est lié d’une tout autre façon à celui de Dieu. Savoir si l’homme est libre commande de savoir s’il peut avoir un maître.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "liberté",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 23,
+    "texte": "La mort est là comme seule réalité.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "mort",
+      "solitude"
+    ]
+  },
+  {
+    "id": 24,
+    "texte": "Si l’absurde annihile toutes mes chances de liberté éternelle, il me rend et exalte au contraire ma liberté d’action. Cette privatisation d’espoir et d’avenir signifie un accroissement dans la disponibilité de l’homme.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "temps",
+      "absurde",
+      "liberté"
+    ]
+  },
+  {
+    "id": 25,
+    "texte": "L’absurde m’éclaire sur ce point : il n’y a pas de lendemain. Voici désormais la raison de ma liberté profonde.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "absurde",
+      "philosophie",
+      "liberté"
+    ]
+  },
+  {
+    "id": 26,
+    "texte": "S’abîmer dans la certitude profonde de la mort, se sentir désormais assez étranger à sa propre vie pour l’accroître et la parcourir sans la myopie de l’amant, il y a là le principe d’une libération.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "mort",
+      "vie",
+      "liberté"
+    ]
+  },
+  {
+    "id": 27,
+    "texte": "Que signifie la vie dans un tel univers ? Rien d’autre pour le moment que l’indifférence à l’avenir et la passion d’épuiser tout ce qui est donné.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "vie",
+      "temps"
+    ]
+  },
+  {
+    "id": 28,
+    "texte": "Si je me persuade que cette vie n’a d’autre face que celle de l’absurde, alors je dois dire que ce qui compte n’est pas de vivre le mieux mais de vivre le plus.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "vie",
+      "absurde"
+    ]
+  },
+  {
+    "id": 29,
+    "texte": "Sentir sa vie, sa révolte, sa liberté, et le plus possible, c’est vivre le et le plus possible.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "vie",
+      "liberté",
+      "révolte"
+    ]
+  },
+  {
+    "id": 30,
+    "texte": "Et c’est bien là le génie : l’intelligence qui connaît ses frontières.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "morale"
+    ]
+  },
+  {
+    "id": 31,
+    "texte": "Ne pas croire au sens profond des choses, c’est le propre de l’homme absurde.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "absurde",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 32,
+    "texte": "Le temps marche avec lui. L’homme absurde est celui qui ne se sépare pas du temps.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "absurde",
+      "temps",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 33,
+    "texte": "Il y a ceux qui sont faits pour vivre et ceux qui sont faits pour aimer. Car l’amour dont on parle ici est paré des illusions de l’éternel.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "amour",
+      "vie",
+      "temps"
+    ]
+  },
+  {
+    "id": 34,
+    "texte": "Un destin n’est pas une punition.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "destin"
+    ]
+  },
+  {
+    "id": 35,
+    "texte": "La joie absurde par excellence, c’est la création.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "absurde",
+      "bonheur",
+      "art"
+    ]
+  },
+  {
+    "id": 36,
+    "texte": "Dans cet univers, l'œuvre est la chance unique de maintenir sa conscience et d’en fixer les aventures. Créer, c’est vivre deux fois.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "art",
+      "vie",
+      "conscience"
+    ]
+  },
+  {
+    "id": 37,
+    "texte": "Pour l’homme absurde, il ne s’agit plus d’expliquer et de résoudre, mais d’éprouver et de découvrir. Tout commence par l’indifférence clairvoyante.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "absurde",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 38,
+    "texte": "Il n’y a pas de frontières entre les disciplines que l’homme se propose pour comprendre et aimer. Elles s’interpénètrent et la même angoisse les confond.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "amour",
+      "condition humaine",
+      "nature"
+    ]
+  },
+  {
+    "id": 39,
+    "texte": "L'œuvre d’art naît du renoncement de l’intelligence à raisonner le concret.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "philosophie",
+      "art"
+    ]
+  },
+  {
+    "id": 40,
+    "texte": "Il n’est pas de destin qui ne se surmonte par le mépris.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "destin"
+    ]
+  },
+  {
+    "id": 41,
+    "texte": "Je laisse Sisyphe au bas de la montagne ! On retrouve toujours son fardeau. Mais Sisyphe enseigne la fidélité supérieure qui nie les dieux et soulève les rochers. Lui aussi juge que tout est bien. Cet univers désormais sans maître ne lui paraît ni stérile ni futile. Chacun des grains de cette pierre à lui seul forme un monde. La lutte elle-même vers les sommets suffit à remplir un cœur d’homme. Il faut imaginer Sisyphe heureux.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "absurde",
+      "bonheur",
+      "amour"
+    ]
+  },
+  {
+    "id": 42,
+    "texte": "Un symbole dépasse toujours celui qui en use et lui fait dire en réalité plus qu’il n’a conscience d’exprimer.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "conscience",
+      "nature"
+    ]
+  },
+  {
+    "id": 43,
+    "texte": "Il y a dans la condition humaine une absurdité fondamentale en même temps qu’une implacable grandeur.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "condition humaine",
+      "absurde",
+      "temps"
+    ]
+  },
+  {
+    "id": 44,
+    "texte": "Le cœur humain a une fâcheuse tendance à appeler destin seulement ce qui l’écrase. Mais le bonheur aussi, à sa manière, est sans raison, puisqu’il est inévitable. L’homme moderne pourtant s’en attribue le mérite.",
+    "auteur": "Camus",
+    "roman": "“Le mythe de Sisyphe”",
+    "themes": [
+      "condition humaine",
+      "philosophie",
+      "bonheur"
+    ]
+  },
+  {
+    "id": 45,
+    "texte": "Seules les œuvres inachevées, car inachevables, nous incitent à divaguer sur l’essence de l’art.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "art",
+      "solitude"
+    ]
+  },
+  {
+    "id": 46,
+    "texte": "Peut-être ne faudrait-il publier que le premier jet, avant donc de savoir soi-même où l’on veut en venir.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 47,
+    "texte": "Ce qui ne peut se traduire en termes de mystique ne mérite pas d’être vécu.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 48,
+    "texte": "Un livre doit remuer des plaies, en provoquer même. Un livre doit être un danger.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "art"
+    ]
+  },
+  {
+    "id": 49,
+    "texte": "On n’écrit pas parce qu’on a quelque chose à dire mais parce qu’on a envie de dire quelque chose.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "vie",
+      "art"
+    ]
+  },
+  {
+    "id": 50,
+    "texte": "Exister est un plagiat.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "vie"
+    ]
+  },
+  {
+    "id": 51,
+    "texte": "Il est faux de prétendre que l’homme ne peut pas vivre sans dieux. Tout d’abord il en crée des simulacres ; ensuite, il supporte tout et s’habitue à tout. Il n’est pas assez noble pour périr par déception.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "vie",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 52,
+    "texte": "La stérilité rend lucide et impitoyable. Dès qu’on cesse de produire, on trouve sans inspiration et sans substance tout ce que font les autres.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "conscience"
+    ]
+  },
+  {
+    "id": 53,
+    "texte": "La véritable élégance morale consiste dans l’art de déguiser ses victoires en défaites.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "art",
+      "morale"
+    ]
+  },
+  {
+    "id": 54,
+    "texte": "La mort est un état de perfection, le seul à la portée d’un mortel.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "mort",
+      "solitude"
+    ]
+  },
+  {
+    "id": 55,
+    "texte": "Toute concession qu’on fait s’accompagne d’un amoindrissement intérieur dont on n’est pas conscient sur le coup.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 56,
+    "texte": "Exister est un phénomène colossal - qui n’a aucun sens. C’est ainsi que je définirais l’ahurissement dans lequel je vis jour après jour.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "vie",
+      "révolte"
+    ]
+  },
+  {
+    "id": 57,
+    "texte": "Être persuadé de quoi que ce soit est un exploit inouï, presque miraculeux.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 58,
+    "texte": "Héraclite s’est trompé : ce n’est pas la foudre, c’est l’ironie qui gouverne l’univers.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "humour"
+    ]
+  },
+  {
+    "id": 59,
+    "texte": "Impossible d’accéder à la vérité par des opinions, car toute opinion n’est qu’un point de vue fou sur la réalité.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "philosophie"
+    ]
+  },
+  {
+    "id": 60,
+    "texte": "Éternité : je me demande comment, sans en perdre la raison, j’ai pu articuler tant de fois ce mot.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "philosophie",
+      "temps",
+      "art"
+    ]
+  },
+  {
+    "id": 61,
+    "texte": "La mort, quel déshonneur ! Devenir soudain objet…",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "mort"
+    ]
+  },
+  {
+    "id": 62,
+    "texte": "Quel dommage que le “néant” ait été dévalorisé par l’abus qu’en ont fait des philosophes indignes de lui !",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "mort"
+    ]
+  },
+  {
+    "id": 63,
+    "texte": "Rien ne rend modeste, pas même la vue d’un cadavre.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "mort"
+    ]
+  },
+  {
+    "id": 64,
+    "texte": "L’illusion enfante et soutient le monde ; on ne la détruit pas sans le détruire.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "espoir",
+      "nature"
+    ]
+  },
+  {
+    "id": 65,
+    "texte": "Un homme qui se respecte n’a pas de patrie. Une patrie, c’est de la glu.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 66,
+    "texte": "Être, c’est être coincé.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 67,
+    "texte": "Ni ce monde, ni l’autre, ni le bonheur ne sont pour l’être abandonné au doute.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "bonheur",
+      "solitude",
+      "nature"
+    ]
+  },
+  {
+    "id": 68,
+    "texte": "Ne plus concevoir que des choses sur lesquelles on se plairait à ruminer dans un tombeau.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "mort"
+    ]
+  },
+  {
+    "id": 69,
+    "texte": "Quand on est voué à se tourmenter, ses propres tourments, si grands soient-ils, ne suffisent pas ; on se jette encore sur ceux des autres.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "souffrance"
+    ]
+  },
+  {
+    "id": 70,
+    "texte": "Parfois, au paroxysme de la volonté, on conçoit qu’on puisse forcer les lois de la nature.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "nature"
+    ]
+  },
+  {
+    "id": 71,
+    "texte": "Il faut que la modestie soit un état bien peu naturel, pour qu’on n’y atteigne qu’à la faveur de l’épuisement.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "nature",
+      "morale"
+    ]
+  },
+  {
+    "id": 72,
+    "texte": "La base de la société, de toute société, est un certain orgueil d’obéir. Quand cet orgueil n’existe plus, la société s’écroule.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "vanité"
+    ]
+  },
+  {
+    "id": 73,
+    "texte": "On est et on demeure esclave aussi longtemps que l’on est pas guéri de la manie d’espérer.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "liberté",
+      "temps",
+      "espoir"
+    ]
+  },
+  {
+    "id": 74,
+    "texte": "Ma mission est de tuer le temps et la sienne de me tuer à son tour. On est tout à fait à l’aise entre assassins.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "mort",
+      "temps"
+    ]
+  },
+  {
+    "id": 75,
+    "texte": "L’état de santé est un état de non-sensation, voire de non-réalité. Dès qu’on cesse de souffrir, on cesse d’exister.",
+    "auteur": "Cioran",
+    "roman": "“Ebauches de vertige”",
+    "themes": [
+      "absurde",
+      "vie",
+      "souffrance"
+    ]
+  },
+  {
+    "id": 76,
+    "texte": "Les vérités absolues n’existent pas, elles ne sont qu’un moyen de nous réduire à la servitude.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "philosophie",
+      "liberté"
+    ]
+  },
+  {
+    "id": 77,
+    "texte": "J’ai grandi dans l’attente du jour où je pourrais tendre enfin ma main vers le voile qui obscurcissait l’univers et découvrir soudain un visage de sagesse et de pitié.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "sagesse",
+      "philosophie"
+    ]
+  },
+  {
+    "id": 78,
+    "texte": "La littérature me paraissait le dernier refuge, sur cette terre, de tous ceux qui ne savent pas où se fourrer.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "art"
+    ]
+  },
+  {
+    "id": 79,
+    "texte": "La littérature a évidemment ses dangers.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "art"
+    ]
+  },
+  {
+    "id": 80,
+    "texte": "Il me semblait que le monde n’était pas assez grand pour contenir mon amour.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "amour",
+      "nature"
+    ]
+  },
+  {
+    "id": 81,
+    "texte": "La vie est pavée d’occasions perdues.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie"
+    ]
+  },
+  {
+    "id": 82,
+    "texte": "Il n’est pas bon d’être tellement aimé, si jeune, si tôt. Ça vous donne de mauvaises habitudes. Avec l’amour maternel, la vie vous fait à l’aube une promesse qu’elle ne tient jamais.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "amour",
+      "vie"
+    ]
+  },
+  {
+    "id": 83,
+    "texte": "Malheureusement pour moi, je me connais en vrais diamants.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "souffrance"
+    ]
+  },
+  {
+    "id": 84,
+    "texte": "L’homme est quelque chose qui ne peut pas être ridiculisé.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 85,
+    "texte": "J’ai beau me consoler en pensant qu’aucun trône n’est solide à l’époque actuelle, le petit prince en moi continue de s’étonner.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 86,
+    "texte": "Rien n’est jamais définitivement acquis, gagné, assuré et conservé.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "révolte"
+    ]
+  },
+  {
+    "id": 87,
+    "texte": "Il est difficile d’être un artiste, de conserver son inspiration intacte, de croire au chef d'œuvre accessible. Mais il est encore plus difficile de se résigner.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "art"
+    ]
+  },
+  {
+    "id": 88,
+    "texte": "Le goût de l’art, cette obsédante poursuite du chef d'œuvre, demeure pour moi, à ce jour, un mystère aussi obscur qu’il l’était il y a trente-cinq ans.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "art"
+    ]
+  },
+  {
+    "id": 89,
+    "texte": "Je suis convaincu que les frustrations éprouvées dans l’enfance laissent une marque profonde et indélébile et ne peuvent plus jamais être compensées.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "philosophie"
+    ]
+  },
+  {
+    "id": 90,
+    "texte": "La vérité meurt jeune.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "philosophie"
+    ]
+  },
+  {
+    "id": 91,
+    "texte": "Ce que la vieillesse a “appris” est en réalité tout ce qu’elle a oublié.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie",
+      "temps"
+    ]
+  },
+  {
+    "id": 92,
+    "texte": "Au lieu de hurler, j’écris des livres.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "art"
+    ]
+  },
+  {
+    "id": 93,
+    "texte": "La mer a toujours été pour moi, depuis, une humble mais suffisante métaphysique. Chaque fois que je la regarde, je deviens un noyé heureux.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie",
+      "bonheur",
+      "nature"
+    ]
+  },
+  {
+    "id": 94,
+    "texte": "S’il y a une chose que je n’aime pas faire, c’est bien enlever leur espoir aux hommes.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "condition humaine",
+      "morale",
+      "espoir"
+    ]
+  },
+  {
+    "id": 95,
+    "texte": "La véritable tragédie de Faust, ce n’est pas qu’il ait vendu son âme au diable. La véritable tragédie, c’est qu’il n’y a pas de diable pour vous acheter votre âme.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 96,
+    "texte": "La vie vaut vraiment la peine d’être vécue, le bonheur est accessible, il suffit simplement de trouver sa vocation profonde, et de se donner à ce qu’on aime avec un abandon total de soi.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie",
+      "bonheur",
+      "solitude"
+    ]
+  },
+  {
+    "id": 97,
+    "texte": "L’humour, cette façon habile en entièrement satisfaisante de désamorcer le réel au moment même où il va vous tomber dessus.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "humour"
+    ]
+  },
+  {
+    "id": 98,
+    "texte": "L’humour est une déclaration de dignité, une affirmation de la supériorité de l’homme sur ce qui lui arrive.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "condition humaine",
+      "morale",
+      "humour"
+    ]
+  },
+  {
+    "id": 99,
+    "texte": "Rien ne vous isole plus que de tendre la main fraternelle de l’humour à ceux qui, à cet égard, sont plus manchots que les pingouins.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "humour"
+    ]
+  },
+  {
+    "id": 100,
+    "texte": "Je me suis mis à concevoir l’homme comme une tentative révolutionnaire en lutte contre sa propre donnée biologique, morale, intellectuelle.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "condition humaine",
+      "morale"
+    ]
+  },
+  {
+    "id": 101,
+    "texte": "La justice, cette projection dans le ciel du système des poids et des mesures humaines.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 102,
+    "texte": "La création littéraire devint pour moi ce qu’elle est toujours, à ses grands moments d’authenticité, une feinte pour tenter d’échapper à l’intolérable, une façon de rendre l’âme pour demeurer vivant.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "art"
+    ]
+  },
+  {
+    "id": 103,
+    "texte": "J’étais loin de soupçonner qu’il arrive aux hommes de traverser la vie et de mourir sans jamais parvenir à se débarrasser de l’enfant tapi dans l’ombre, assoiffé d’attention, attendant jusqu’à la dernière ride une main douce qui caresserait sa tête et une voix qui murmurerait : “Oui, mon chéri, oui. Maman t’aime toujours comme personne d’autre n’a jamais su t'aimer”.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "amour",
+      "mort",
+      "vie"
+    ]
+  },
+  {
+    "id": 104,
+    "texte": "Une vocation, une inspiration profonde et irrésistible, peuvent s’accompagner d’un manque total de don.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 105,
+    "texte": "Mais il ne s’agit pas seulement de moi. Il s’agit de notre je à tous.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "solitude"
+    ]
+  },
+  {
+    "id": 106,
+    "texte": "Le cœur ne vieillit jamais, et le vide, l’absence qui l’ont marqué, demeurent et ne font que grandir.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie",
+      "amour"
+    ]
+  },
+  {
+    "id": 107,
+    "texte": "Mais il n’y avait pas d’évasion pour moi. Je suis resté prisonnier du souvenir.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 108,
+    "texte": "Il me faut toujours un public pour donner le meilleur de moi-même.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 109,
+    "texte": "Lorsqu’une de vos amies vous quitte pour suivre un homme mûr, prenez celà pour ce que c’est : une promesse d’avenir.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "temps",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 110,
+    "texte": "J’étais jeune, plus jeune que je ne le croyais. Ma naïveté cependant était vieille et désabusée. Éternelle, en vérité.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "philosophie",
+      "vie",
+      "temps"
+    ]
+  },
+  {
+    "id": 111,
+    "texte": "Il m’a toujours été difficile d’accomplir cet effort prodigieux de bêtise dont il faut être capable pour croire sérieusement à la guerre et en accepter l'éventualité.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 112,
+    "texte": "Aucune cause ne me paraît assez juste, et le cœur n’y est pas. Lorsqu’il s’agit de tuer mes semblables, je ne suis pas assez poète.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "mort",
+      "amour",
+      "art"
+    ]
+  },
+  {
+    "id": 113,
+    "texte": "Je vois la vie comme une grande course de relais où chacun de nous, avant de tomber ; doit porter plus loin le défi d’être un homme.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie",
+      "condition humaine",
+      "révolte"
+    ]
+  },
+  {
+    "id": 114,
+    "texte": "L’injustice me semble venir d’ailleurs et les hommes m’en paraissent d’autant plus les victimes qu’ils en sont les instruments.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 115,
+    "texte": "Si on pouvait mourir de honte, il y a longtemps que l’humanité ne serait plus là.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "mort",
+      "temps",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 116,
+    "texte": "Le plus grand effort de ma vie a toujours été de parvenir à désespérer complètement. Il n’y a rien à faire. Il y a toujours en moi quelque chose qui continue à sourire.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie",
+      "espoir",
+      "humour"
+    ]
+  },
+  {
+    "id": 117,
+    "texte": "Peu à peu, le vide est devenu pour moi ce que je connais aujourd’hui de plus peuplé.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 118,
+    "texte": "Je choisis toujours pour errer sur la terre les lieux où il y a assez de place pour tous ceux qui ne sont plus là.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 119,
+    "texte": "Pour faire face à la vie, il m’a toujours fallu le réconfort d’une féminité vulnérable et dévouée qui me donne le sentiment d’offrir alors que je prends, de soutenir alors que je m’appuie.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie"
+    ]
+  },
+  {
+    "id": 120,
+    "texte": "Avec, au cœur, un tel besoin d’élévation, tout devenait abîme et chute.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "amour"
+    ]
+  },
+  {
+    "id": 121,
+    "texte": "Je me tuais à vouloir vivre ce qui à la rigueur pouvait seulement être chanté.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie",
+      "solitude"
+    ]
+  },
+  {
+    "id": 122,
+    "texte": "Ma course fut une poursuite errante de quelque chose dont l’art me donnait la soif, mais dont la vie ne pouvait m’offrir l’apaisement.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie",
+      "art"
+    ]
+  },
+  {
+    "id": 123,
+    "texte": "La vie est jeune. En vieillissant, elle se fait durée, elle se fait temps, elle se fait adieu.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie",
+      "temps"
+    ]
+  },
+  {
+    "id": 124,
+    "texte": "Je sentais le vide dans mes poings et, au-dessus de ma tête, tout ce qui était infini, éternel, inaccessible, entourait l’arène d’un milliard de sourires indifférents à notre plus vieux combat.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie",
+      "temps",
+      "humour"
+    ]
+  },
+  {
+    "id": 125,
+    "texte": "Elle avait des yeux où il faisait si bon vivre que je n’ai jamais su où aller depuis.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "vie"
+    ]
+  },
+  {
+    "id": 126,
+    "texte": "L’Océan : il feint l’infini, mais je sais que lui aussi se heurte partout à ses limites, et voilà pourquoi, sans doute, tout ce tumulte, tout ce fracas.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "art",
+      "nature"
+    ]
+  },
+  {
+    "id": 127,
+    "texte": "Il est bon que l’ignorance préserve et mette à l’abri le souvenir, la fidélité, l’amitié.",
+    "auteur": "Romain Gary",
+    "roman": "“La promesse de l’aube”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 128,
+    "texte": "Tu n’as pas de respect pour toi-même, car tu mets ton bonheur dans les âmes des autres.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "bonheur"
+    ]
+  },
+  {
+    "id": 129,
+    "texte": "Songe à faire ce que tu as en main, avec une stricte et simple dignité, avec amour, indépendance et justice. Accomplis chaque action comme étant la dernière de ta vie, la tenant à l’écart de toute irréflexion, de toute aversion passionnée qui t’arracherait à l’empire de la raison, de toute feinte, de tout égoïsme et de tout ressentiment à l’égard du destin.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "philosophie",
+      "vie",
+      "amour"
+    ]
+  },
+  {
+    "id": 130,
+    "texte": "Tout faire, tout dire et tout penser en homme qui peut sortir à l’instant de la vie.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "philosophie",
+      "vie",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 131,
+    "texte": "Celui qui redoute une action naturelle est un enfant.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "nature"
+    ]
+  },
+  {
+    "id": 132,
+    "texte": "Rien de plus misérable que l’homme qui tourne autour de tout, qui cherche à deviner de ce qui se passe dans les âmes d’autrui.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "condition humaine",
+      "souffrance"
+    ]
+  },
+  {
+    "id": 133,
+    "texte": "Que tout est opinion.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "philosophie"
+    ]
+  },
+  {
+    "id": 134,
+    "texte": "S’irriter contre quelque évènement que ce soit, est se développer en dehors de la nature.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "nature"
+    ]
+  },
+  {
+    "id": 135,
+    "texte": "La philosophie consiste en ceci : à veiller à ce que le génie qui est en nous ne fasse rien au hasard, ni par mensonge ni par faux-semblant ; à ce qu’il ne s’attache point à ce que les autres font ou ne font pas.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "philosophie"
+    ]
+  },
+  {
+    "id": 136,
+    "texte": "Les accidents mêmes qui s’ajoutent aux productions naturelles ont quelque chose de gracieux et de séduisant.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "nature"
+    ]
+  },
+  {
+    "id": 137,
+    "texte": "N’use point la part de vie qui te reste à te faire des idées sur ce que font les autres, à moins que tu ne vises à quelque intérêt pour la communauté.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "vie",
+      "art"
+    ]
+  },
+  {
+    "id": 138,
+    "texte": "Il faut t'habituer à n’avoir que les seules idées à propos desquelles, si on te demandait soudain : “À quoi penses-tu maintenant ?” tu puisses répondre avec franchise : “À ceci et à celà”.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "mort",
+      "solitude"
+    ]
+  },
+  {
+    "id": 139,
+    "texte": "Agir sans mauvais gré, sans mépris de l’intérêt commun, sans irréflexion, sans tirer par côté.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 140,
+    "texte": "Pour toi choisis simplement et librement ce que tu vois de meilleur et persiste en ce choix - Mais le meilleur, c’est l’utile.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "liberté"
+    ]
+  },
+  {
+    "id": 141,
+    "texte": "N’estimes jamais comme utile à toi-même ce qui t’obligera un jour à transgresser ta foi, à quitter ta pudeur, à concevoir de la haine pour quelqu’un, à suspecter, à maudire, à dissimuler, à désirer ce qui a besoin de murs et de teinture.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 142,
+    "texte": "Vénère la faculté de te faire une opinion.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "philosophie"
+    ]
+  },
+  {
+    "id": 143,
+    "texte": "Se faire toujours une définition et une description de l’objet dont l’image se présente à l’esprit, afin de le voir distinctement, tel qu’il est en sa propre essence.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "temps",
+      "conscience",
+      "révolte"
+    ]
+  },
+  {
+    "id": 144,
+    "texte": "Aie toujours prêts les principes requis pour la connaissances des choses divines et humaines et pour tout accomplir, même l’action la plus insignifiante.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "philosophie",
+      "vie",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 145,
+    "texte": "Ne t’écarte plus.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "art"
+    ]
+  },
+  {
+    "id": 146,
+    "texte": "Ce qui reste en propre à l’homme de bien est d’aimer et d’accueillir avec satisfaction les accidents fortuits et les évènements filés en même temps que son destin.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "amour",
+      "temps",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 147,
+    "texte": "N’accomplis jamais aucun acte au hasard, ni autrement que ne le requiert la règle qui assure la perfection de l’art.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "art"
+    ]
+  },
+  {
+    "id": 148,
+    "texte": "Tu peux, à l’heure que tu veux, te retirer en toi-même.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 149,
+    "texte": "Supprime la présomption, tu auras supprimé : “On m’a fait tort”. Supprime : “On m’a fait tort”, le tort est supprimé.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "vanité"
+    ]
+  },
+  {
+    "id": 150,
+    "texte": "Ce que tu fais, fais-le avec cette pensée d’être un homme de bien.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "philosophie",
+      "condition humaine",
+      "morale"
+    ]
+  },
+  {
+    "id": 151,
+    "texte": "N’agis point comme si tu devais vivre des milliers d’années. L’inévitable est sur toi suspendu. Tant que tu vis, tant que cela t’est possible, deviens homme de bien.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "vie",
+      "condition humaine",
+      "morale"
+    ]
+  },
+  {
+    "id": 152,
+    "texte": "L’émeraude perd-elle de sa valeur, si elle n’est pas louangée ?",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "nature"
+    ]
+  },
+  {
+    "id": 153,
+    "texte": "Dans tout élan, propose toi le juste ; et, dans toute représentation, sauvegarde ta faculté de comprendre.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "temps",
+      "morale"
+    ]
+  },
+  {
+    "id": 154,
+    "texte": "Il faut, sur chaque chose, se rappeler à soi-même : “Ne serait-ce point là une de ces choses qui ne sont pas nécessaires ?”. Et non seulement il faut supprimer les actions qui ne sont pas nécessaires, mais aussi les idées.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "solitude",
+      "nature"
+    ]
+  },
+  {
+    "id": 155,
+    "texte": "Tout est éphémère, et le fait de se souvenir, et l’objet dont on se souvient.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "vie",
+      "temps"
+    ]
+  },
+  {
+    "id": 156,
+    "texte": "Examine avec attention leurs principes directeurs ; examine les sages, ce qu’ils évitent, et ce qu’ils recherchent.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "philosophie",
+      "sagesse"
+    ]
+  },
+  {
+    "id": 157,
+    "texte": "Le meilleur moyen de t’en défendre est de ne pas leur ressembler.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 158,
+    "texte": "Ne suppose pas, si quelque chose t’es difficile, que cette chose soit impossible à l’homme. Mais, si une chose est possible et naturelle à l’homme, pense qu’elle est aussi à ta portée.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "nature",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 159,
+    "texte": "Il est honteux que, dans le temps où ton corps ne se laisse point abattre, ton âme, en ce même moment, se laisse abattre avant lui.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "temps"
+    ]
+  },
+  {
+    "id": 160,
+    "texte": "Qui a vu ce qui est dans le présent a tout vu, et tout ce qui a été de toute éternité et tout ce qui sera dans l’infini du temps ; car tout est semblable et de même aspect.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "temps"
+    ]
+  },
+  {
+    "id": 161,
+    "texte": "Accommode-toi aux choses que t’assigna le sort ; et les hommes, que le destin te donna pour compagnons, aime-les, mais du fond du cœur.",
+    "auteur": "Marc-Aurèle",
+    "roman": "Pensées pour moi-même",
+    "themes": [
+      "destin",
+      "amour",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 162,
+    "texte": "Dieu savait-il quel jeune arbre eût donné ce germe mort ? Dieu savait-il ce qu’eussent été ces yeux qui ne s’étaient pas allumés ? Ne retrouve-t-on pas dans la mort ces milliards d’êtres qui ont préexisté ?",
+    "auteur": "Mauriac",
+    "roman": "“Génitrix”",
+    "themes": [
+      "mort"
+    ]
+  },
+  {
+    "id": 163,
+    "texte": "Elle scrutait les profondeurs de son être comme un ciel où l’on n’ose pas croire que l’orage s’éloigne.",
+    "auteur": "Mauriac",
+    "roman": "“Génitrix”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 164,
+    "texte": "Gisante au fond d’un abîme de fatigue, elle espère vaincre désormais ses fous rires. Elle oublie qu’elle s’est armée de sécheresse, qu’elle a dressé la moquerie entre le monde et soi.",
+    "auteur": "Mauriac",
+    "roman": "“Génitrix”",
+    "themes": [
+      "nature",
+      "humour"
+    ]
+  },
+  {
+    "id": 165,
+    "texte": "Il n’est plus temps de te leurrer toi-même. Tu as voulu ton malheur.",
+    "auteur": "Mauriac",
+    "roman": "“Génitrix”",
+    "themes": [
+      "temps",
+      "souffrance"
+    ]
+  },
+  {
+    "id": 166,
+    "texte": "C’est le pire des conditions basses qu’elles nous font voir les êtres sous l’aspect de l’utilité et que nous cherchons plus que leur valeur d’usage.",
+    "auteur": "Mauriac",
+    "roman": "“Génitrix”",
+    "themes": [
+      "condition humaine",
+      "sagesse"
+    ]
+  },
+  {
+    "id": 167,
+    "texte": "Les morts n’aident pas à mourir les vivants qu’ils ont aimés.",
+    "auteur": "Mauriac",
+    "roman": "“Génitrix”",
+    "themes": [
+      "mort",
+      "amour"
+    ]
+  },
+  {
+    "id": 168,
+    "texte": "Ce corps allait être consumé dans la mort et il ne l’avait pas été dans l’amour. L’anéantissement des caresses ne l’avait pas préparé à la dissolution éternelle. Cette chair finissait sans avoir connu son propre secret.",
+    "auteur": "Mauriac",
+    "roman": "“Génitrix”",
+    "themes": [
+      "mort",
+      "amour",
+      "temps"
+    ]
+  },
+  {
+    "id": 169,
+    "texte": "Si elle avait été aimée, des embrassements l'eussent obligée de s’arracher à l’étreinte du monde. Elle n’eut pas à se détacher n’ayant point connu d’attachement. Aucun visage en larme et laissé en arrière ne lui permit de mesurer la fuite glissant vers l’Ombre. Elle eut la mort douce de ceux qui ne sont pas aimés.",
+    "auteur": "Mauriac",
+    "roman": "“Génitrix”",
+    "themes": [
+      "amour",
+      "mort",
+      "sagesse"
+    ]
+  },
+  {
+    "id": 170,
+    "texte": "Notre corps lui-même cherche, découvre son plaisir enfoui hors de lui, tout mêlé à la chair d’un autre corps que nous rendons heureux.",
+    "auteur": "Mauriac",
+    "roman": "“Génitrix”",
+    "themes": [
+      "bonheur"
+    ]
+  },
+  {
+    "id": 171,
+    "texte": "Qui a perdu l’appétit a perdu le goût de ce qu’il y a de meilleur au monde.",
+    "auteur": "Mauriac",
+    "roman": "“Génitrix”",
+    "themes": [
+      "nature"
+    ]
+  },
+  {
+    "id": 172,
+    "texte": "Peut-être n’y a-t-il pas plusieurs amours. Peut-être n’est-il qu’un seul amour.",
+    "auteur": "Mauriac",
+    "roman": "“Génitrix”",
+    "themes": [
+      "amour",
+      "solitude"
+    ]
+  },
+  {
+    "id": 173,
+    "texte": "Il n’est pas si aisé de discerner l’exaspération de la haine.",
+    "auteur": "Mauriac",
+    "roman": "“Le Sagouin”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 174,
+    "texte": "Or, il n’y avait jamais eu entre eux que la rencontre de deux solitudes qui ne se melèrent jamais.",
+    "auteur": "Mauriac",
+    "roman": "“Le Sagouin”",
+    "themes": [
+      "solitude"
+    ]
+  },
+  {
+    "id": 175,
+    "texte": "[Les excuses], ce sont des mots. Ils ne changent rien aux sentiments véritables. Nous ne pouvons plus avoir d’illusions…",
+    "auteur": "Mauriac",
+    "roman": "“Le Sagouin”",
+    "themes": [
+      "espoir"
+    ]
+  },
+  {
+    "id": 176,
+    "texte": "Comme on dit “faire l’amour”, il faudrait pouvoir dire “faire la haine”. C’est bon de faire la haine, ça repose, ça détend.",
+    "auteur": "Mauriac",
+    "roman": "“Le Sagouin”",
+    "themes": [
+      "amour"
+    ]
+  },
+  {
+    "id": 177,
+    "texte": "Il lui arrive même de lire pour son plaisir ? Mais alors, rien n’est perdu.",
+    "auteur": "Mauriac",
+    "roman": "“Le Sagouin”",
+    "themes": [
+      "bonheur"
+    ]
+  },
+  {
+    "id": 178,
+    "texte": "Les morts, ces taupes humaines dont la présence se manifeste par de petits monticules.",
+    "auteur": "Mauriac",
+    "roman": "“Le Sagouin”",
+    "themes": [
+      "mort",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 179,
+    "texte": "Où résidait-il, le Dieu de ce monde cruel ? Où donc avait-il laissé une trace ?",
+    "auteur": "Mauriac",
+    "roman": "“Le Sagouin”",
+    "themes": [
+      "nature"
+    ]
+  },
+  {
+    "id": 180,
+    "texte": "On ne peut pas se faire aimer à volonté, on n’est pas libre de plaire ; mais aucune puissance sur la terre ni dans le ciel ne saurait empêcher une femme d’élire un homme et de le choisir pour dieu. Lui-même, cela ne le concerne pas puisque rien ne lui est demandé en échange.",
+    "auteur": "Mauriac",
+    "roman": "“Le Sagouin”",
+    "themes": [
+      "liberté",
+      "amour",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 181,
+    "texte": "Il y a ceux qui peuvent toujours et ceux qui ne peuvent pas toujours… Ceux qui peuvent toujours ne vivent que pour la chose, parce qu’on a beau dire, c’est ce qu’il y a de plus agréable au monde… Et ceux qui ne peuvent pas toujours, ceux-là se donnent à Dieu, ou à la science, ou la littérature…",
+    "auteur": "Mauriac",
+    "roman": "“Le Sagouin”",
+    "themes": [
+      "art",
+      "nature"
+    ]
+  },
+  {
+    "id": 182,
+    "texte": "On n'est pas maître de sa nausée.",
+    "auteur": "Mauriac",
+    "roman": "“Le Sagouin”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 183,
+    "texte": "Il l’avait rendu aux ténèbres qui le garderaient à jamais. Mais étaient-ce bien les ténèbres ? Son regard cherche au-delà des choses, au-delà des murs et des meubles et des tuiles du toit, et de la nuit lactée, et des constellations de l’hiver, cherche, cherche ce royaume des esprits d’où peut-être l’enfant éternellement vivant voit cet homme, et sur sa joue noire de barbe, la larme qu’il oublie d’essuyer.",
+    "auteur": "Mauriac",
+    "roman": "“Le Sagouin”",
+    "themes": [
+      "temps",
+      "conscience",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 184,
+    "texte": "Nous ne sommes jamais chez nous, nous sommes toujours au-delà. La crainte, le désir, l’espérance nous élancent vers l’avenir, et nous dérobent le sentiment et la considération de ce qui est, pour nous amuser à ce qui sera, voire quand nous ne serons plus.",
+    "auteur": "Montaigne",
+    "roman": "“Essais”",
+    "themes": [
+      "temps",
+      "espoir"
+    ]
+  },
+  {
+    "id": 185,
+    "texte": "Jamais homme n’est donc heureux, puisqu’il ne l’est qu’après qu’il ne l’est plus.",
+    "auteur": "Montaigne",
+    "roman": "“Essais”",
+    "themes": [
+      "bonheur",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 186,
+    "texte": "Je trouverais plus galant d’imiter ceux qui entreprennent, vivants et respirants, jouir de l’ordre et honneur de leur sépulture, et qui se plaisent de voir en marbre leur morte contenance. Heureux qui savent réjouir et gratifier leur sens par l’insensibilité, et vivre de leur mort.",
+    "auteur": "Montaigne",
+    "roman": "“Essais”",
+    "themes": [
+      "mort",
+      "vie",
+      "bonheur"
+    ]
+  },
+  {
+    "id": 187,
+    "texte": "Que ce soit une chose étrange et surprenante de dire que c’est une sottise de chercher les grandeurs, cela est admirable.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 188,
+    "texte": "Il n’y a qu’un point indivisible qui soit le véritable lieu, les autres sont trop près, trop loin, trop haut ou trop bas. La perspective l’assigne dans l’art de la peinture. Mais dans la vérité et la morale qui l’assignera ?",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "philosophie",
+      "art",
+      "morale"
+    ]
+  },
+  {
+    "id": 189,
+    "texte": "C’est bien être malheureux que d'être dans une tristesse insupportable aussitôt qu’on est réduit à se considérer.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "bonheur",
+      "morale",
+      "souffrance"
+    ]
+  },
+  {
+    "id": 190,
+    "texte": "La douceur de la gloire est si grande qu’à quelque objet qu’on l’attache, même à la mort, on l’aime.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "mort",
+      "vanité"
+    ]
+  },
+  {
+    "id": 191,
+    "texte": "Peu de chose nous console parce que peu de chose nous afflige.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 192,
+    "texte": "Nous ne nous tenons jamais au temps présent. Nous anticipons l’avenir comme trop lent à venir, ou nous rappelons le passé pour l’arrêter comme trop prompt, si imprudents que nous errons dans les temps qui ne sont pas les nôtres, et ne pensons point au seul qui nous appartient. C’est que le temps présent d’ordinaire nous blesse.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "temps",
+      "art",
+      "solitude"
+    ]
+  },
+  {
+    "id": 193,
+    "texte": "Il n’est pas bon d’être trop libre.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "liberté"
+    ]
+  },
+  {
+    "id": 194,
+    "texte": "Si notre condition était véritablement heureuse, il ne faudrait pas nous divertir d’y penser.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "philosophie",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 195,
+    "texte": "Il faut se connaître soi-même. Quand cela ne servirait pas à trouver le vrai, cela au moins sert à régler sa vie, et il n’y a rien de plus juste.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "vie",
+      "morale"
+    ]
+  },
+  {
+    "id": 196,
+    "texte": "Curiosité n’est que vanité le plus souvent ; on ne veut savoir que pour en parler.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "vanité"
+    ]
+  },
+  {
+    "id": 197,
+    "texte": "Nous connaissons la vérité non seulement par la raison mais encore par le cœur.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "philosophie",
+      "amour",
+      "solitude"
+    ]
+  },
+  {
+    "id": 198,
+    "texte": "La grandeur de l’homme est grande en ce qu’il se connaît misérable.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "condition humaine",
+      "souffrance"
+    ]
+  },
+  {
+    "id": 199,
+    "texte": "Nous sommes si présomptueux que nous voudrions être connus de toute la terre et même des gens qui viendront quand nous serons plus. Et nous sommes si vains que l’estime de cinq ou six personnes qui nous environnent nous amuse et nous contente.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "vie",
+      "bonheur",
+      "vanité"
+    ]
+  },
+  {
+    "id": 200,
+    "texte": "Tout le malheur des hommes vient d’une seule chose, qui est de ne savoir pas demeurer en repos dans une chambre.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "vie",
+      "solitude",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 201,
+    "texte": "Ainsi s’écoule la vie ; on cherche le repos en combattant quelques obstacles et, si on les a surmontés, le repos devient insupportable, par l’ennui qu’il engendre. Ainsi l’homme est si malheureux qu’il s’ennuierait même sans aucune cause d’ennui par l’état propre de sa complexion.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "vie",
+      "bonheur",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 202,
+    "texte": "Sans le divertissement, il n’y a point de joie ; avec le divertissement, il n’y a point de tristesse.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "bonheur"
+    ]
+  },
+  {
+    "id": 203,
+    "texte": "La connaissance de Dieu sans celle de sa misère fait l’orgueil.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "philosophie",
+      "vie",
+      "vanité"
+    ]
+  },
+  {
+    "id": 204,
+    "texte": "Toute notre dignité consiste donc en la pensée. C’est de là qu’il faut nous relever. Travaillons donc à bien penser : voici le principe de la morale.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "morale",
+      "philosophie"
+    ]
+  },
+  {
+    "id": 205,
+    "texte": "Le silence éternel de ces espaces infinis m’effraie.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "temps"
+    ]
+  },
+  {
+    "id": 206,
+    "texte": "Les hommes sont si nécessairement fous que ce serait être fou par un autre tour de folie de n’être pas fou.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 207,
+    "texte": "Qui voudra connaître à plein la vanité de l’homme n’a qu’à considérer les causes et les effets de l’amour.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "amour",
+      "condition humaine",
+      "vanité"
+    ]
+  },
+  {
+    "id": 208,
+    "texte": "Tous errent d’autant plus dangereusement qu’ils suivent chacun une vérité.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "philosophie"
+    ]
+  },
+  {
+    "id": 209,
+    "texte": "Tout notre raisonnement se réduit à céder au sentiment.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "philosophie"
+    ]
+  },
+  {
+    "id": 210,
+    "texte": "Rien n’est si insupportable à l’homme que d’être dans un plein repos, sans passion, sans affaire, sans divertissement, sans application. Il sent alors son néant, son abandon, son insuffisance, sa dépendance, son impuissance, son vide.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "mort",
+      "solitude",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 211,
+    "texte": "Voulez-vous qu’on croie du bien de vous ? N’en dites pas.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "morale"
+    ]
+  },
+  {
+    "id": 212,
+    "texte": "Il faut que le monde soit bien aveuglé s’il vous croit.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "morale",
+      "nature"
+    ]
+  },
+  {
+    "id": 213,
+    "texte": "L’homme n’est ni ange ni bête, et le malheur veut que qui veut faire l’ange fait la bête.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "condition humaine",
+      "souffrance"
+    ]
+  },
+  {
+    "id": 214,
+    "texte": "Ce que peut la vertu d’un homme ne se doit pas mesurer par ses efforts mais par son ordinaire.",
+    "auteur": "Pascal",
+    "roman": "“Pensées”",
+    "themes": [
+      "condition humaine",
+      "morale"
+    ]
+  },
+  {
+    "id": 215,
+    "texte": "La jeunesse est le temps d’étudier la sagesse ; la vieillesse est le temps de la pratiquer.",
+    "auteur": "Rousseau",
+    "roman": "“En méditant sur les dispositions de mon âme…”",
+    "themes": [
+      "temps",
+      "sagesse",
+      "philosophie"
+    ]
+  },
+  {
+    "id": 216,
+    "texte": "L’expérience ne profite que pour le temps qu’on a devant soi.",
+    "auteur": "Rousseau",
+    "roman": "“En méditant sur les dispositions de mon âme…”",
+    "themes": [
+      "temps"
+    ]
+  },
+  {
+    "id": 217,
+    "texte": "Est-il temps au moment qu’il faut mourir d’apprendre comment on aurait dû vivre ?",
+    "auteur": "Rousseau",
+    "roman": "“En méditant sur les dispositions de mon âme…”",
+    "themes": [
+      "mort",
+      "vie",
+      "temps"
+    ]
+  },
+  {
+    "id": 218,
+    "texte": "Nous entrons en lice à notre naissance, nous en sortons à la mort.",
+    "auteur": "Rousseau",
+    "roman": "“En méditant sur les dispositions de mon âme…”",
+    "themes": [
+      "mort",
+      "vie",
+      "destin"
+    ]
+  },
+  {
+    "id": 219,
+    "texte": "Ce qu’on doit faire dépend toujours de ce qu’on doit croire et nos opinions sont la règle de nos actions.",
+    "auteur": "Rousseau",
+    "roman": "“En méditant sur les dispositions de mon âme…”",
+    "themes": [
+      "philosophie"
+    ]
+  },
+  {
+    "id": 220,
+    "texte": "Peut-on chercher de la bonne foi dans des chefs de parti ? Leur philosophie est pour les autres ; il m’en faudrait une pour moi.",
+    "auteur": "Rousseau",
+    "roman": "“En méditant sur les dispositions de mon âme…”",
+    "themes": [
+      "philosophie",
+      "art"
+    ]
+  },
+  {
+    "id": 221,
+    "texte": "Fixons une bonne foi mes opinions, mes principes, et soyons pour le reste de ma vie ce que j’aurais trouvé devoir être après y avoir bien pensé.",
+    "auteur": "Rousseau",
+    "roman": "“En méditant sur les dispositions de mon âme…”",
+    "themes": [
+      "philosophie",
+      "morale",
+      "vie"
+    ]
+  },
+  {
+    "id": 222,
+    "texte": "On se défend difficilement de croire ce qu’on désire avec ardeur.",
+    "auteur": "Rousseau",
+    "roman": "“En méditant sur les dispositions de mon âme…”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 223,
+    "texte": "Il importe d’avoir un sentiment pour soi, et de le choisir avec toute la maturité de jugement qu’on peut y mettre.",
+    "auteur": "Rousseau",
+    "roman": "“En méditant sur les dispositions de mon âme…”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 224,
+    "texte": "Je vis que je donnais aux insensés jugements des hommes et aux petits événements de cette courte vie beaucoup plus d’importance qu’ils n’en avaient.",
+    "auteur": "Rousseau",
+    "roman": "“En méditant sur les dispositions de mon âme…”",
+    "themes": [
+      "vie",
+      "condition humaine"
+    ]
+  },
+  {
+    "id": 225,
+    "texte": "Une grande partie de la vie s’écoule à mal faire, la plus grande à ne rien faire, la vie toute entière à faire autre chose.",
+    "auteur": "Sénèque",
+    "roman": "“Lettres à Lucilius”",
+    "themes": [
+      "vie",
+      "art"
+    ]
+  },
+  {
+    "id": 226,
+    "texte": "Tu dépendras moins du lendemain quand tu auras mis la main sur l’aujourd’hui.",
+    "auteur": "Sénèque",
+    "roman": "“Lettres à Lucilius”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 227,
+    "texte": "Ce n’est pas celui qui a peu mais celui qui désire plus, qui est pauvre.",
+    "auteur": "Sénèque",
+    "roman": "“Lettres à Lucilius”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 228,
+    "texte": "Ils inversent, quant à eux, l’ordre des devoirs ceux qui jugent une fois qu’ils ont aimé, et non pas aiment une fois qu’ils ont jugé. Réfléchis longtemps pour savoir si tu dois prendre quelqu’un en amitié. Une fois décidé, accueille-le de tout ton cœur.",
+    "auteur": "Sénèque",
+    "roman": "“Lettres à Lucilius”",
+    "themes": [
+      "amour",
+      "temps",
+      "morale"
+    ]
+  },
+  {
+    "id": 229,
+    "texte": "La plupart sont ballottés misérablement entre la peur de la mort et les tourments de la vie, et, tout en ne voulant pas vivre, ils ne savent pas mourir.",
+    "auteur": "Sénèque",
+    "roman": "“Lettres à Lucilius”",
+    "themes": [
+      "mort",
+      "vie",
+      "souffrance"
+    ]
+  },
+  {
+    "id": 230,
+    "texte": "Aucun bien n’aide son possesseur si son âme n’a pas été à l’avance préparée à le perdre ; or rien n’est plus facile à perdre que ce que l’on peut regretter d’avoir perdu.",
+    "auteur": "Sénèque",
+    "roman": "“Lettres à Lucilius”",
+    "themes": [
+      "morale"
+    ]
+  },
+  {
+    "id": 231,
+    "texte": "Nul n’est malheureux seulement à cause du présent.",
+    "auteur": "Sénèque",
+    "roman": "“Lettres à Lucilius”",
+    "themes": [
+      "bonheur",
+      "temps",
+      "solitude"
+    ]
+  },
+  {
+    "id": 232,
+    "texte": "Long est le chemin qui passe par les préceptes, court et efficace celui qui passe par les exemples.",
+    "auteur": "Sénèque",
+    "roman": "“Lettres à Lucilius”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 233,
+    "texte": "Tu demandes ce que tu devrais décider avant tout d’éviter ? La foule.",
+    "auteur": "Sénèque",
+    "roman": "“Lettres à Lucilius”",
+    "themes": [
+      "réflexion"
+    ]
+  },
+  {
+    "id": 234,
+    "texte": "Ne te fais pas semblable aux mauvais parce qu’ils sont en nombre, ne te fais pas non plus l’ennemi du nombre parce qu’il ne te ressemble pas. Fréquente ceux qui te rendront meilleur, accueille ceux que tu peux, toi, rendre meilleurs.",
+    "auteur": "Sénèque",
+    "roman": "“Lettres à Lucilius”",
+    "themes": [
+      "réflexion"
+    ]
   }
 ]
