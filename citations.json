@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "texte": "On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux.",
+    "auteur": "Antoine de Saint-Exupéry",
+    "roman": "Le Petit Prince",
+    "themes": ["sagesse", "amour"]
+  },
+  {
+    "id": 2,
+    "texte": "Il faut imaginer Sisyphe heureux.",
+    "auteur": "Albert Camus",
+    "roman": "Le Mythe de Sisyphe",
+    "themes": ["philosophie", "bonheur"]
+  },
+  {
+    "id": 3,
+    "texte": "Toutes les familles heureuses se ressemblent ; chaque famille malheureuse est malheureuse à sa façon.",
+    "auteur": "Léon Tolstoï",
+    "roman": "Anna Karénine",
+    "themes": ["famille", "bonheur"]
+  },
+  {
+    "id": 4,
+    "texte": "La beauté sauvera le monde.",
+    "auteur": "Fiodor Dostoïevski",
+    "roman": "L'Idiot",
+    "themes": ["beauté", "espoir"]
+  },
+  {
+    "id": 5,
+    "texte": "Longtemps, je me suis couché de bonne heure.",
+    "auteur": "Marcel Proust",
+    "roman": "Du côté de chez Swann",
+    "themes": ["mémoire", "temps"]
+  },
+  {
+    "id": 6,
+    "texte": "Il n'y a pas de honte à préférer le bonheur.",
+    "auteur": "Albert Camus",
+    "roman": "La Peste",
+    "themes": ["bonheur", "philosophie"]
+  },
+  {
+    "id": 7,
+    "texte": "Qui veut noyer son chien l'accuse de la rage.",
+    "auteur": "Molière",
+    "roman": "Les Femmes savantes",
+    "themes": ["sagesse", "injustice"]
+  },
+  {
+    "id": 8,
+    "texte": "L'homme est condamné à être libre.",
+    "auteur": "Jean-Paul Sartre",
+    "roman": "L'Être et le Néant",
+    "themes": ["liberté", "philosophie"]
+  },
+  {
+    "id": 9,
+    "texte": "Le cœur a ses raisons que la raison ne connaît point.",
+    "auteur": "Blaise Pascal",
+    "roman": "Pensées",
+    "themes": ["amour", "sagesse"]
+  },
+  {
+    "id": 10,
+    "texte": "La vie, c'est ce qui arrive quand on est occupé à faire d'autres projets.",
+    "auteur": "John Lennon",
+    "roman": "Interviews",
+    "themes": ["vie", "temps"]
+  },
+  {
+    "id": 11,
+    "texte": "Ce qui ne me tue pas me rend plus fort.",
+    "auteur": "Friedrich Nietzsche",
+    "roman": "Le Crépuscule des idoles",
+    "themes": ["force", "philosophie"]
+  },
+  {
+    "id": 12,
+    "texte": "L'enfer, c'est les autres.",
+    "auteur": "Jean-Paul Sartre",
+    "roman": "Huis clos",
+    "themes": ["philosophie", "solitude"]
+  },
+  {
+    "id": 13,
+    "texte": "Vivre, c'est la chose la plus rare au monde. La plupart des gens se contentent d'exister.",
+    "auteur": "Oscar Wilde",
+    "roman": "L'Âme de l'homme sous le socialisme",
+    "themes": ["vie", "sagesse"]
+  },
+  {
+    "id": 14,
+    "texte": "La liberté commence où l'ignorance finit.",
+    "auteur": "Victor Hugo",
+    "roman": "Discours à l'Assemblée",
+    "themes": ["liberté", "sagesse"]
+  },
+  {
+    "id": 15,
+    "texte": "Aimer, ce n'est pas se regarder l'un l'autre, c'est regarder ensemble dans la même direction.",
+    "auteur": "Antoine de Saint-Exupéry",
+    "roman": "Terre des hommes",
+    "themes": ["amour", "sagesse"]
+  }
+]
