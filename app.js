@@ -26,8 +26,10 @@ async function init() {
   setupModal();
   setupImport();
   setupConfirmModal();
+  setupTagsManager();
   renderToday();
   renderLibrary();
+  renderTagsManager();
   registerServiceWorker();
   startNotificationScheduler();
 }
@@ -689,6 +691,225 @@ async function registerServiceWorker() {
       console.log('Service Worker non enregistre:', e);
     }
   }
+}
+
+// ===== Gestion Auteurs & Thèmes =====
+function getCustomAuthors() {
+  try { return JSON.parse(localStorage.getItem('customAuthors') || '[]'); } catch { return []; }
+}
+
+function getCustomThemes() {
+  try { return JSON.parse(localStorage.getItem('customThemes') || '[]'); } catch { return []; }
+}
+
+function getAllAuthors() {
+  const fromCitations = [...new Set(citations.map(c => c.auteur))];
+  const custom = getCustomAuthors();
+  return [...new Set([...fromCitations, ...custom])].sort();
+}
+
+function getAllThemes() {
+  const fromCitations = [...new Set(citations.flatMap(c => c.themes))];
+  const custom = getCustomThemes();
+  return [...new Set([...fromCitations, ...custom])].sort();
+}
+
+function setupTagsManager() {
+  // Add author
+  document.getElementById('btn-add-author').addEventListener('click', () => {
+    const input = document.getElementById('input-new-author');
+    const name = input.value.trim();
+    if (!name) return;
+    const custom = getCustomAuthors();
+    if (!getAllAuthors().includes(name)) {
+      custom.push(name);
+      localStorage.setItem('customAuthors', JSON.stringify(custom));
+      renderTagsManager();
+      renderLibrary();
+      showToast('Auteur ajoute : ' + name);
+    } else {
+      showToast('Cet auteur existe deja');
+    }
+    input.value = '';
+  });
+
+  document.getElementById('input-new-author').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); document.getElementById('btn-add-author').click(); }
+  });
+
+  // Add theme
+  document.getElementById('btn-add-theme').addEventListener('click', () => {
+    const input = document.getElementById('input-new-theme');
+    const name = input.value.trim().toLowerCase();
+    if (!name) return;
+    const custom = getCustomThemes();
+    if (!getAllThemes().includes(name)) {
+      custom.push(name);
+      localStorage.setItem('customThemes', JSON.stringify(custom));
+      renderTagsManager();
+      renderLibrary();
+      showToast('Theme ajoute : ' + name);
+    } else {
+      showToast('Ce theme existe deja');
+    }
+    input.value = '';
+  });
+
+  document.getElementById('input-new-theme').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); document.getElementById('btn-add-theme').click(); }
+  });
+}
+
+function renderTagsManager() {
+  renderAuthorTags();
+  renderThemeTags();
+}
+
+function renderAuthorTags() {
+  const container = document.getElementById('authors-list');
+  container.innerHTML = '';
+  const authors = getAllAuthors();
+
+  authors.forEach(author => {
+    const count = citations.filter(c => c.auteur === author).length;
+    const tag = document.createElement('div');
+    tag.className = 'manager-tag';
+    tag.innerHTML = `
+      <span class="tag-name">${escapeHtml(author)}</span>
+      <span class="tag-count">${count}</span>
+      <button class="tag-btn tag-btn-edit" aria-label="Renommer">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+        </svg>
+      </button>
+    `;
+
+    tag.querySelector('.tag-btn-edit').addEventListener('click', () => {
+      startInlineEdit(tag, author, (newName) => {
+        if (newName && newName !== author) {
+          renameAuthor(author, newName);
+        }
+      });
+    });
+
+    container.appendChild(tag);
+  });
+}
+
+function renderThemeTags() {
+  const container = document.getElementById('themes-list');
+  container.innerHTML = '';
+  const themes = getAllThemes();
+
+  themes.forEach(theme => {
+    const count = citations.filter(c => c.themes.includes(theme)).length;
+    const tag = document.createElement('div');
+    tag.className = 'manager-tag';
+    tag.innerHTML = `
+      <span class="tag-name">${escapeHtml(theme)}</span>
+      <span class="tag-count">${count}</span>
+      <button class="tag-btn tag-btn-edit" aria-label="Renommer">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+        </svg>
+      </button>
+      <button class="tag-btn tag-btn-delete" aria-label="Supprimer">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    `;
+
+    tag.querySelector('.tag-btn-edit').addEventListener('click', () => {
+      startInlineEdit(tag, theme, (newName) => {
+        if (newName && newName !== theme) {
+          renameTheme(theme, newName.toLowerCase());
+        }
+      });
+    });
+
+    tag.querySelector('.tag-btn-delete').addEventListener('click', () => {
+      removeTheme(theme);
+    });
+
+    container.appendChild(tag);
+  });
+}
+
+function startInlineEdit(tagEl, currentValue, onSave) {
+  const nameSpan = tagEl.querySelector('.tag-name');
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.className = 'tag-edit-input';
+  input.value = currentValue;
+
+  nameSpan.replaceWith(input);
+  input.focus();
+  input.select();
+
+  const finish = () => {
+    const newValue = input.value.trim();
+    const span = document.createElement('span');
+    span.className = 'tag-name';
+    span.textContent = newValue || currentValue;
+    input.replaceWith(span);
+    if (newValue && newValue !== currentValue) {
+      onSave(newValue);
+    }
+  };
+
+  input.addEventListener('blur', finish);
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); input.blur(); }
+    if (e.key === 'Escape') { input.value = currentValue; input.blur(); }
+  });
+}
+
+function renameAuthor(oldName, newName) {
+  citations.forEach(c => {
+    if (c.auteur === oldName) c.auteur = newName;
+  });
+  // Update custom authors list
+  const custom = getCustomAuthors();
+  const idx = custom.indexOf(oldName);
+  if (idx !== -1) custom[idx] = newName;
+  localStorage.setItem('customAuthors', JSON.stringify(custom));
+
+  saveCitations();
+  renderTagsManager();
+  renderLibrary();
+  showToast('Auteur renomme : ' + newName);
+}
+
+function renameTheme(oldName, newName) {
+  citations.forEach(c => {
+    const idx = c.themes.indexOf(oldName);
+    if (idx !== -1) c.themes[idx] = newName;
+  });
+  const custom = getCustomThemes();
+  const cidx = custom.indexOf(oldName);
+  if (cidx !== -1) custom[cidx] = newName;
+  localStorage.setItem('customThemes', JSON.stringify(custom));
+
+  saveCitations();
+  renderTagsManager();
+  renderLibrary();
+  showToast('Theme renomme : ' + newName);
+}
+
+function removeTheme(theme) {
+  citations.forEach(c => {
+    c.themes = c.themes.filter(t => t !== theme);
+  });
+  const custom = getCustomThemes().filter(t => t !== theme);
+  localStorage.setItem('customThemes', JSON.stringify(custom));
+
+  saveCitations();
+  renderTagsManager();
+  renderLibrary();
+  showToast('Theme supprime : ' + theme);
 }
 
 // ===== Toast =====

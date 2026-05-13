@@ -977,6 +977,128 @@ body {
   transform: scale(0.98);
 }
 
+/* ===== Tags Manager (Auteurs / Themes) ===== */
+.tags-manager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.manager-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--text);
+}
+
+.manager-tag .tag-name {
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.manager-tag .tag-count {
+  font-size: 0.7rem;
+  color: var(--text-light);
+  background: var(--bg);
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+
+.manager-tag .tag-btn {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  padding: 0;
+  border-radius: 50%;
+  transition: all 0.15s;
+}
+
+.manager-tag .tag-btn:active {
+  background: var(--border);
+}
+
+.manager-tag .tag-btn-edit:active {
+  color: var(--accent);
+}
+
+.manager-tag .tag-btn-delete:active {
+  color: #e74c3c;
+}
+
+/* Inline edit for tags */
+.tag-edit-input {
+  width: 140px;
+  padding: 4px 8px;
+  border: 1px solid var(--accent-light);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--text);
+  outline: none;
+  background: var(--bg-card);
+}
+
+.add-tag-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.input-new-tag {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text);
+  outline: none;
+}
+
+.input-new-tag:focus {
+  border-color: var(--accent-light);
+}
+
+.input-new-tag::placeholder {
+  color: var(--text-light);
+  opacity: 0.5;
+}
+
+.btn-add-tag {
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.btn-add-tag:active {
+  background: #6D3510;
+  transform: scale(0.97);
+}
+
 /* ===== Responsive ===== */
 @media (min-width: 768px) {
   .today-text {
