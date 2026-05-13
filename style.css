@@ -175,12 +175,40 @@ body {
   margin: 0 auto;
 }
 
+.library-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .library-title {
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 20px;
+}
+
+.btn-import {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  color: var(--text-light);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-import:active {
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-color: var(--accent-light);
 }
 
 .search-bar {
@@ -281,10 +309,55 @@ body {
   padding: 20px;
   transition: box-shadow 0.2s, transform 0.2s;
   cursor: default;
+  position: relative;
 }
 
-.citation-card:active {
-  transform: scale(0.99);
+.card-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 4px;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+.citation-card:hover .card-actions {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .card-actions {
+    opacity: 0.6;
+  }
+}
+
+.card-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: var(--accent-bg);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: all 0.2s;
+}
+
+.card-btn:active {
+  transform: scale(0.9);
+}
+
+.card-btn-edit:active {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.card-btn-delete:active {
+  color: #c0392b;
+  background: #fde8e8;
 }
 
 .citation-card .card-text {
@@ -294,6 +367,7 @@ body {
   font-style: italic;
   color: var(--text);
   margin-bottom: 12px;
+  padding-right: 60px;
 }
 
 .citation-card .card-meta {
@@ -796,7 +870,14 @@ body {
   opacity: 0.5;
 }
 
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
 .btn-submit {
+  flex: 1;
   padding: 14px;
   border: none;
   border-radius: var(--radius-sm);
@@ -807,11 +888,92 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
-  margin-top: 4px;
 }
 
 .btn-submit:active {
   background: #6D3510;
+  transform: scale(0.98);
+}
+
+.btn-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 18px;
+  border: 1px solid #e74c3c;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: #e74c3c;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-delete:active {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-delete.hidden {
+  display: none;
+}
+
+/* Confirmation modal */
+.modal-small {
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.confirm-text {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-confirm-cancel {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-confirm-cancel:active {
+  background: var(--accent-bg);
+}
+
+.btn-confirm-delete {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: #e74c3c;
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-confirm-delete:active {
+  background: #c0392b;
   transform: scale(0.98);
 }
 

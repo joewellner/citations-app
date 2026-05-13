@@ -1,5 +1,7 @@
 // ===== State =====
 let citations = [];
+let editingId = null;
+let deleteTargetId = null;
 let settings = {
   notifEnabled: false,
   notifTime: '08:00',
@@ -15,122 +17,62 @@ document.addEventListener('DOMContentLoaded', init);
 
 async function init() {
   await loadCitations();
-  loadUserCitations();
   loadSettings();
   setupNavigation();
   setupSettings();
   setupSearch();
   setupShare();
   setupInstall();
-  setupAddCitation();
+  setupModal();
+  setupImport();
+  setupConfirmModal();
   renderToday();
   renderLibrary();
   registerServiceWorker();
   startNotificationScheduler();
 }
 
-// ===== Load Citations =====
+// ===== Load / Save Citations =====
 async function loadCitations() {
+  // If we have local data (user has made edits/adds/deletes), use that
+  const local = localStorage.getItem('allCitations');
+  if (local) {
+    try {
+      citations = JSON.parse(local);
+      return;
+    } catch (e) {}
+  }
+  // Otherwise load from JSON file
   try {
     const response = await fetch('citations.json');
     citations = await response.json();
+    saveCitations();
   } catch (e) {
     console.error('Erreur chargement citations:', e);
     citations = [];
   }
 }
 
-function loadUserCitations() {
-  const saved = localStorage.getItem('userCitations');
-  if (saved) {
-    try {
-      const userCitations = JSON.parse(saved);
-      citations = citations.concat(userCitations);
-    } catch (e) {}
-  }
+function saveCitations() {
+  localStorage.setItem('allCitations', JSON.stringify(citations));
 }
 
-function saveUserCitation(citation) {
-  const saved = localStorage.getItem('userCitations');
-  let userCitations = [];
-  if (saved) {
-    try { userCitations = JSON.parse(saved); } catch (e) {}
-  }
-  userCitations.push(citation);
-  localStorage.setItem('userCitations', JSON.stringify(userCitations));
-}
-
-// ===== Ajouter une citation =====
-function setupAddCitation() {
-  const btnAdd = document.getElementById('btn-add');
-  const modal = document.getElementById('modal-add');
-  const btnClose = document.getElementById('btn-close-modal');
-  const form = document.getElementById('form-add');
-
-  btnAdd.addEventListener('click', () => {
-    modal.classList.remove('hidden');
-  });
-
-  btnClose.addEventListener('click', () => {
-    modal.classList.add('hidden');
-  });
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.add('hidden');
-    }
-  });
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const texte = document.getElementById('input-texte').value.trim();
-    const auteur = document.getElementById('input-auteur').value.trim();
-    const roman = document.getElementById('input-roman').value.trim() || '';
-    const themesRaw = document.getElementById('input-themes').value.trim();
-
-    if (!texte || !auteur) return;
-
-    const themes = themesRaw
-      ? themesRaw.split(',').map(t => t.trim().toLowerCase()).filter(t => t)
-      : [];
-
-    const newId = Math.max(...citations.map(c => c.id), 0) + 1;
-    const citation = {
-      id: newId,
-      texte: texte,
-      auteur: auteur,
-      roman: roman,
-      themes: themes
-    };
-
-    citations.push(citation);
-    saveUserCitation(citation);
-    renderLibrary();
-
-    form.reset();
-    modal.classList.add('hidden');
-    showToast('Citation ajoutee !');
-  });
+function getNextId() {
+  return citations.length > 0 ? Math.max(...citations.map(c => c.id)) + 1 : 1;
 }
 
 // ===== Navigation =====
 function setupNavigation() {
   document.querySelectorAll('.nav-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const page = btn.dataset.page;
-      showPage(page);
-    });
+    btn.addEventListener('click', () => showPage(btn.dataset.page));
   });
 }
 
 function showPage(pageName) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-
   const page = document.getElementById('page-' + pageName);
   const btn = document.querySelector(`.nav-btn[data-page="${pageName}"]`);
-
   if (page) page.classList.add('active');
   if (btn) btn.classList.add('active');
 }
@@ -150,11 +92,9 @@ function getCitationDuJour() {
 function renderToday() {
   const citation = getCitationDuJour();
   if (!citation) return;
-
   document.getElementById('today-text').textContent = citation.texte;
   document.getElementById('today-author').textContent = '— ' + citation.auteur;
   document.getElementById('today-book').textContent = citation.roman;
-
   const themesEl = document.getElementById('today-themes');
   themesEl.innerHTML = '';
   citation.themes.forEach(theme => {
@@ -162,6 +102,133 @@ function renderToday() {
     tag.className = 'theme-tag';
     tag.textContent = theme;
     themesEl.appendChild(tag);
+  });
+}
+
+// ===== Modal (Ajouter / Modifier) =====
+function setupModal() {
+  const btnAdd = document.getElementById('btn-add');
+  const modal = document.getElementById('modal-add');
+  const btnClose = document.getElementById('btn-close-modal');
+  const form = document.getElementById('form-add');
+
+  btnAdd.addEventListener('click', () => openModal());
+
+  btnClose.addEventListener('click', () => closeModal());
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const texte = document.getElementById('input-texte').value.trim();
+    const auteur = document.getElementById('input-auteur').value.trim();
+    const roman = document.getElementById('input-roman').value.trim() || '';
+    const themesRaw = document.getElementById('input-themes').value.trim();
+    if (!texte || !auteur) return;
+
+    const themes = themesRaw
+      ? themesRaw.split(',').map(t => t.trim().toLowerCase()).filter(t => t)
+      : [];
+
+    if (editingId !== null) {
+      // Mode modification
+      const idx = citations.findIndex(c => c.id === editingId);
+      if (idx !== -1) {
+        citations[idx].texte = texte;
+        citations[idx].auteur = auteur;
+        citations[idx].roman = roman;
+        citations[idx].themes = themes;
+      }
+      showToast('Citation modifiee !');
+    } else {
+      // Mode ajout
+      citations.push({
+        id: getNextId(),
+        texte: texte,
+        auteur: auteur,
+        roman: roman,
+        themes: themes
+      });
+      showToast('Citation ajoutee !');
+    }
+
+    saveCitations();
+    renderLibrary();
+    closeModal();
+  });
+}
+
+function openModal(citation) {
+  const modal = document.getElementById('modal-add');
+  const title = document.getElementById('modal-title');
+  const btnSubmit = document.getElementById('btn-submit-text');
+  const btnDelete = document.getElementById('btn-delete');
+
+  document.getElementById('form-add').reset();
+
+  if (citation) {
+    // Mode modification
+    editingId = citation.id;
+    title.textContent = 'Modifier la citation';
+    btnSubmit.textContent = 'Enregistrer';
+    btnDelete.classList.remove('hidden');
+    document.getElementById('input-texte').value = citation.texte;
+    document.getElementById('input-auteur').value = citation.auteur;
+    document.getElementById('input-roman').value = citation.roman || '';
+    document.getElementById('input-themes').value = (citation.themes || []).join(', ');
+  } else {
+    // Mode ajout
+    editingId = null;
+    title.textContent = 'Nouvelle citation';
+    btnSubmit.textContent = 'Ajouter';
+    btnDelete.classList.add('hidden');
+  }
+
+  modal.classList.remove('hidden');
+}
+
+function closeModal() {
+  document.getElementById('modal-add').classList.add('hidden');
+  editingId = null;
+}
+
+// ===== Confirmation suppression =====
+function setupConfirmModal() {
+  const modal = document.getElementById('modal-confirm');
+  const btnCancel = document.getElementById('btn-confirm-cancel');
+  const btnConfirm = document.getElementById('btn-confirm-delete');
+
+  document.getElementById('btn-delete').addEventListener('click', () => {
+    if (editingId !== null) {
+      deleteTargetId = editingId;
+      modal.classList.remove('hidden');
+    }
+  });
+
+  btnCancel.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    deleteTargetId = null;
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+      deleteTargetId = null;
+    }
+  });
+
+  btnConfirm.addEventListener('click', () => {
+    if (deleteTargetId !== null) {
+      citations = citations.filter(c => c.id !== deleteTargetId);
+      saveCitations();
+      renderLibrary();
+      showToast('Citation supprimee');
+      deleteTargetId = null;
+    }
+    modal.classList.add('hidden');
+    closeModal();
   });
 }
 
@@ -234,14 +301,8 @@ function filterAndRender() {
       c.themes.some(t => t.toLowerCase().includes(query))
     );
   }
-
-  if (author) {
-    filtered = filtered.filter(c => c.auteur === author);
-  }
-
-  if (theme) {
-    filtered = filtered.filter(c => c.themes.includes(theme));
-  }
+  if (author) filtered = filtered.filter(c => c.auteur === author);
+  if (theme) filtered = filtered.filter(c => c.themes.includes(theme));
 
   const countEl = document.getElementById('results-count');
   countEl.textContent = `${filtered.length} citation${filtered.length > 1 ? 's' : ''}`;
@@ -253,6 +314,20 @@ function filterAndRender() {
     const card = document.createElement('div');
     card.className = 'citation-card';
     card.innerHTML = `
+      <div class="card-actions">
+        <button class="card-btn card-btn-edit" aria-label="Modifier" data-id="${c.id}">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          </svg>
+        </button>
+        <button class="card-btn card-btn-delete" aria-label="Supprimer" data-id="${c.id}">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 6 5 6 21 6"/>
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+          </svg>
+        </button>
+      </div>
       <p class="card-text">${escapeHtml(c.texte)}</p>
       <div class="card-meta">
         <div>
@@ -264,6 +339,20 @@ function filterAndRender() {
         </div>
       </div>
     `;
+
+    // Edit button
+    card.querySelector('.card-btn-edit').addEventListener('click', (e) => {
+      e.stopPropagation();
+      openModal(c);
+    });
+
+    // Delete button
+    card.querySelector('.card-btn-delete').addEventListener('click', (e) => {
+      e.stopPropagation();
+      deleteTargetId = c.id;
+      document.getElementById('modal-confirm').classList.remove('hidden');
+    });
+
     listEl.appendChild(card);
   });
 }
@@ -274,13 +363,155 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+// ===== Import Word =====
+function setupImport() {
+  const input = document.getElementById('input-import');
+  input.addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    showToast('Import en cours...');
+
+    try {
+      const arrayBuffer = await file.arrayBuffer();
+      const result = await mammoth.extractRawText({ arrayBuffer });
+      const text = result.value;
+      const imported = parseDocumentText(text);
+
+      if (imported.length === 0) {
+        showToast('Aucune citation trouvee dans le document');
+        return;
+      }
+
+      let nextId = getNextId();
+      imported.forEach(c => {
+        c.id = nextId++;
+        citations.push(c);
+      });
+
+      saveCitations();
+      renderLibrary();
+      showToast(imported.length + ' citation' + (imported.length > 1 ? 's' : '') + ' importee' + (imported.length > 1 ? 's' : '') + ' !');
+    } catch (err) {
+      console.error('Erreur import:', err);
+      showToast('Erreur lors de l\'import');
+    }
+
+    input.value = '';
+  });
+}
+
+function parseDocumentText(text) {
+  const results = [];
+  const lines = text.split('\n');
+
+  let currentAuteur = '';
+  let currentRoman = '';
+  let currentCitation = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+
+    // Detect header: "Author - "Book"" or "Author - «Book»"
+    const headerMatch = line.match(/^(.+?)\s*[-–—]\s*[""«"'](.+?)[""»"']$/);
+    if (headerMatch) {
+      // Save previous citation if any
+      if (currentCitation.length > 0 && currentAuteur) {
+        const texte = currentCitation.join(' ').trim();
+        if (texte.length > 10) {
+          results.push({
+            texte: cleanCitation(texte),
+            auteur: currentAuteur,
+            roman: currentRoman,
+            themes: detectThemes(texte)
+          });
+        }
+        currentCitation = [];
+      }
+      currentAuteur = headerMatch[1].trim();
+      currentRoman = headerMatch[2].trim();
+      continue;
+    }
+
+    if (!currentAuteur) continue;
+
+    if (line === '') {
+      if (currentCitation.length > 0) {
+        const texte = currentCitation.join(' ').trim();
+        if (texte.length > 10) {
+          results.push({
+            texte: cleanCitation(texte),
+            auteur: currentAuteur,
+            roman: currentRoman,
+            themes: detectThemes(texte)
+          });
+        }
+        currentCitation = [];
+      }
+    } else {
+      currentCitation.push(line);
+    }
+  }
+
+  // Last citation
+  if (currentCitation.length > 0 && currentAuteur) {
+    const texte = currentCitation.join(' ').trim();
+    if (texte.length > 10) {
+      results.push({
+        texte: cleanCitation(texte),
+        auteur: currentAuteur,
+        roman: currentRoman,
+        themes: detectThemes(texte)
+      });
+    }
+  }
+
+  return results;
+}
+
+function cleanCitation(text) {
+  return text.replace(/\s*\[\d+\]\s*\.?\s*$/, '').trim();
+}
+
+function detectThemes(text) {
+  const lower = text.toLowerCase();
+  const themeKeywords = {
+    'absurde': ['absurde', 'absurdité', 'sisyphe', 'non-sens'],
+    'philosophie': ['philosophi', 'penser', 'pensée', 'raison', 'vérité', 'opinion', 'principes'],
+    'mort': ['mort', 'mourir', 'suicide', 'tuer', 'cadavre', 'néant'],
+    'vie': ['vivre', 'vie', 'exister', 'existence', 'naissance'],
+    'liberté': ['liberté', 'libre', 'libération', 'esclave'],
+    'bonheur': ['bonheur', 'heureux', 'joie', 'plaisir'],
+    'amour': ['amour', 'aimer', 'aimé', 'coeur', 'cœur'],
+    'temps': ['temps', 'éternité', 'éternel', 'éphémère', 'avenir', 'passé'],
+    'conscience': ['conscience', 'éveil', 'lucid', 'esprit'],
+    'art': ['art', 'œuvre', 'création', 'créer', 'littérat', 'écri', 'livre'],
+    'solitude': ['solitude', 'seul', 'isoler', 'étranger'],
+    'morale': ['morale', 'vertu', 'dignité', 'devoir', 'juste'],
+    'sagesse': ['sagesse', 'sage'],
+    'souffrance': ['souffr', 'malheur', 'douleur', 'tourment'],
+    'espoir': ['espoir', 'espérer', 'illusion'],
+    'nature': ['nature', 'naturel', 'mer', 'océan'],
+    'humour': ['humour', 'ironi', 'rire'],
+    'destin': ['destin', 'sort', 'fardeau'],
+  };
+
+  const scores = {};
+  for (const [theme, keywords] of Object.entries(themeKeywords)) {
+    const score = keywords.filter(kw => lower.includes(kw)).length;
+    if (score > 0) scores[theme] = score;
+  }
+
+  const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+  const result = sorted.slice(0, 3).map(([t]) => t);
+  return result.length > 0 ? result : ['reflexion'];
+}
+
 // ===== Réglages =====
 function loadSettings() {
   const saved = localStorage.getItem('citationSettings');
   if (saved) {
-    try {
-      settings = { ...settings, ...JSON.parse(saved) };
-    } catch (e) {}
+    try { settings = { ...settings, ...JSON.parse(saved) }; } catch (e) {}
   }
 }
 
@@ -297,18 +528,14 @@ function setupSettings() {
   const showTheme = document.getElementById('notif-show-theme');
   const testBtn = document.getElementById('btn-test-notif');
 
-  // Apply saved settings
   enabledToggle.checked = settings.notifEnabled;
   timeInput.value = settings.notifTime;
   showAuthor.checked = settings.showAuthor;
   showBook.checked = settings.showBook;
   showTheme.checked = settings.showTheme;
 
-  if (settings.notifEnabled) {
-    notifOptions.classList.remove('hidden');
-  }
+  if (settings.notifEnabled) notifOptions.classList.remove('hidden');
 
-  // Toggle notifications
   enabledToggle.addEventListener('change', async () => {
     if (enabledToggle.checked) {
       const granted = await requestNotificationPermission();
@@ -330,7 +557,6 @@ function setupSettings() {
     saveSettings();
   });
 
-  // Time change
   timeInput.addEventListener('change', () => {
     settings.notifTime = timeInput.value;
     saveSettings();
@@ -338,28 +564,13 @@ function setupSettings() {
     showToast('Heure mise a jour : ' + timeInput.value);
   });
 
-  // Content toggles
-  showAuthor.addEventListener('change', () => {
-    settings.showAuthor = showAuthor.checked;
-    saveSettings();
-  });
+  showAuthor.addEventListener('change', () => { settings.showAuthor = showAuthor.checked; saveSettings(); });
+  showBook.addEventListener('change', () => { settings.showBook = showBook.checked; saveSettings(); });
+  showTheme.addEventListener('change', () => { settings.showTheme = showTheme.checked; saveSettings(); });
 
-  showBook.addEventListener('change', () => {
-    settings.showBook = showBook.checked;
-    saveSettings();
-  });
-
-  showTheme.addEventListener('change', () => {
-    settings.showTheme = showTheme.checked;
-    saveSettings();
-  });
-
-  // Test notification
   testBtn.addEventListener('click', () => {
     const citation = getCitationDuJour();
-    if (citation) {
-      sendNotification(citation);
-    }
+    if (citation) sendNotification(citation);
   });
 }
 
@@ -369,10 +580,8 @@ async function requestNotificationPermission() {
     showToast('Ton navigateur ne supporte pas les notifications');
     return false;
   }
-
   if (Notification.permission === 'granted') return true;
   if (Notification.permission === 'denied') return false;
-
   const result = await Notification.requestPermission();
   return result === 'granted';
 }
@@ -381,71 +590,43 @@ function sendNotification(citation) {
   if (Notification.permission !== 'granted') return;
 
   let body = citation.texte;
-  if (body.length > 180) {
-    body = body.substring(0, 177) + '...';
-  }
+  if (body.length > 180) body = body.substring(0, 177) + '...';
 
   const parts = [];
   if (settings.showAuthor) parts.push(citation.auteur);
   if (settings.showBook) parts.push(citation.roman);
-  if (settings.showTheme && citation.themes.length > 0) {
-    parts.push(citation.themes.join(', '));
-  }
+  if (settings.showTheme && citation.themes.length > 0) parts.push(citation.themes.join(', '));
 
   const title = parts.length > 0 ? parts.join(' — ') : 'Citation du jour';
 
   if (navigator.serviceWorker && navigator.serviceWorker.controller) {
-    navigator.serviceWorker.controller.postMessage({
-      type: 'SHOW_NOTIFICATION',
-      title: title,
-      body: body
-    });
+    navigator.serviceWorker.controller.postMessage({ type: 'SHOW_NOTIFICATION', title, body });
   } else {
-    new Notification(title, {
-      body: body,
-      icon: 'icons/icon-192.svg',
-      badge: 'icons/icon-192.svg',
-      tag: 'citation-du-jour',
-      renotify: true
-    });
+    new Notification(title, { body, icon: 'icons/icon-192.svg', badge: 'icons/icon-192.svg', tag: 'citation-du-jour', renotify: true });
   }
 }
 
 function startNotificationScheduler() {
   stopNotificationScheduler();
   if (!settings.notifEnabled) return;
-
-  // Check every 30 seconds
   notifCheckInterval = setInterval(checkNotificationTime, 30000);
-  // Also check immediately
   checkNotificationTime();
 }
 
 function stopNotificationScheduler() {
-  if (notifCheckInterval) {
-    clearInterval(notifCheckInterval);
-    notifCheckInterval = null;
-  }
+  if (notifCheckInterval) { clearInterval(notifCheckInterval); notifCheckInterval = null; }
 }
 
-function restartNotificationScheduler() {
-  startNotificationScheduler();
-}
+function restartNotificationScheduler() { startNotificationScheduler(); }
 
 function checkNotificationTime() {
   if (!settings.notifEnabled) return;
-
   const now = new Date();
   const today = now.toDateString();
-  const lastShown = localStorage.getItem('lastNotifDate');
-
-  if (lastShown === today) return;
+  if (localStorage.getItem('lastNotifDate') === today) return;
 
   const [targetH, targetM] = settings.notifTime.split(':').map(Number);
-  const currentH = now.getHours();
-  const currentM = now.getMinutes();
-
-  if (currentH > targetH || (currentH === targetH && currentM >= targetM)) {
+  if (now.getHours() > targetH || (now.getHours() === targetH && now.getMinutes() >= targetM)) {
     const citation = getCitationDuJour();
     if (citation) {
       sendNotification(citation);
@@ -459,20 +640,11 @@ function setupShare() {
   document.getElementById('btn-share').addEventListener('click', () => {
     const citation = getCitationDuJour();
     if (!citation) return;
-
     const text = `"${citation.texte}"\n— ${citation.auteur}, ${citation.roman}`;
-
     if (navigator.share) {
-      navigator.share({
-        title: 'Citation du jour',
-        text: text
-      }).catch(() => {});
+      navigator.share({ title: 'Citation du jour', text }).catch(() => {});
     } else {
-      navigator.clipboard.writeText(text).then(() => {
-        showToast('Citation copiee !');
-      }).catch(() => {
-        showToast('Impossible de copier');
-      });
+      navigator.clipboard.writeText(text).then(() => showToast('Citation copiee !')).catch(() => showToast('Impossible de copier'));
     }
   });
 }
@@ -507,14 +679,10 @@ async function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
     try {
       const reg = await navigator.serviceWorker.register('sw.js');
-
-      // Try periodic background sync
       if ('periodicSync' in reg) {
         const status = await navigator.permissions.query({ name: 'periodic-background-sync' });
         if (status.state === 'granted') {
-          await reg.periodicSync.register('daily-citation', {
-            minInterval: 24 * 60 * 60 * 1000
-          });
+          await reg.periodicSync.register('daily-citation', { minInterval: 24 * 60 * 60 * 1000 });
         }
       }
     } catch (e) {
@@ -531,11 +699,7 @@ function showToast(message) {
     toast.className = 'toast';
     document.body.appendChild(toast);
   }
-
   toast.textContent = message;
   toast.classList.add('show');
-
-  setTimeout(() => {
-    toast.classList.remove('show');
-  }, 2500);
+  setTimeout(() => toast.classList.remove('show'), 2500);
 }
